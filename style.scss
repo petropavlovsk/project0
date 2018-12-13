@@ -1,0 +1,149 @@
+/*VARIABLES*/
+$myRed: #ef4a2d;
+$myYellow: #f4ef49;
+$myTeal: teal;
+$myGreen: #3bdd61;
+$myBlue: #4286f4;
+$myLightgray: #e3eaf4;
+
+
+table {
+  border: 3px solid black;
+  border-collapse: collapse;
+  width: 50%;
+  margin-left: 20px;
+}
+
+th, td {
+  border: 1px solid black; /*th och td påverkas*/
+  padding: 5px;
+}
+th {
+  background-color: lightgrey;
+}
+
+header {
+  font-weight: bold;
+  background-color: $myLightgray;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+footer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p, h1, h2, h3, h4, h5  {
+  margin-left: 20px;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.container > div {
+    background-color: $myGreen;
+    font-size: 20px;
+    margin: 20px;
+    padding: 20px;
+    width: 200px;
+}
+
+#id-exempel {
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: $myBlue;
+}
+
+/* before och after påverkar eller lägger till något före eller efter ett element*/
+a::before {
+  content: "\21d2 ";
+}
+
+a::after {content: "";
+}
+
+/* selection påverkar vad som händer med markerade element */
+p::selection {
+    color: $myBlue;
+    background-color: $myGreen;
+}
+
+
+#form-exempel {
+  margin-left: 20px;
+}
+/*detta gör sidan lätt grå när den blir mindre än 800px*/
+@media (min-width: 860px) {
+       body {
+         background-color: white;
+         font-family: Times;
+        }
+        h1::before {
+          content: "Welcome to my page about webprogramming!";
+        }
+}
+@media (max-width: 859px) {
+       body {
+         background-color: lightgrey;
+         font-family: Verdana;
+        }
+        h1::before {
+          content: "Welcome!";
+        }
+}
+
+/*skapar en grid som skalar om en av flera kolumner*/
+.grid {
+  background-color: $myGreen;
+  display: grid;
+  padding: 20px;
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  grid-template-columns: 200px 200px auto;
+}
+.grid-item {
+  background-color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+
+/*stylar rowsen i bootstrap-exemplet*/
+.row > div {
+  padding: 20px;
+  background-color: teal;
+  border: 2px solid black;
+}
+#bootstrap-exempel {
+  margin: 30px;
+}
+
+
+/*man kan också jobba med ärftlighet i scss*/
+
+%message {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid black;
+  padding: 20px;
+  margin: 20px;
+  }
+
+/*här anger man att hej ska ha allt som message har*/
+.hej {
+  @extend %message;
+  background-color: $myGreen;
+}
+
+.by {
+  @extend %message;
+  background-color: $myRed;
+}

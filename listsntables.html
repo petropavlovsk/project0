@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Webpage</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+      <header>
+        <a href="index.html">Back to the beginning</a>
+      </header>
+
+        <p>Hello, world! This is my learning-page about lists and tables.</p>
+
+        <div id="lists-exempel">
+          <h3>Lists</h3>
+            <p>An unordered list</p>
+            <ul>
+              <li>foo</li>
+              <li>bar</li>
+              <li>baz</li>
+            </ul>
+            <p>An ordered list</p>
+            <ol>
+              <li>foo</li>
+                <ul>
+                  <li>Foo</li>
+                  <li>Bar</li>
+                  <li>Baz</li>
+                </ul>
+              <li>bar</li>
+              <li>baz</li>
+            </ol>
+          </div>
+
+          <div id="table-exempel">
+              <table>
+                <tr><th>Name</th><th>Age</th><th>Number</th></tr>
+                <tr><td>Name</td><td>Age</td><td>Number</td></tr>
+                <tr><td>Name</td><td>Age</td><td>Number</td></tr>
+                <tr><td>Name</td><td>Age</td><td>Number</td></tr>
+              </table>
+            </div>
+
+            <h3> Forms </h3>
+            <div id="form-exempel">
+                  <div id="inputform">
+                  <input name="name" type="text" placeholder="Name">
+                  <input name="password" type="password" placeholder="Password">
+                  <input name="age" type="number" placeholder="Age">
+                  </div>
+
+                  <br>
+
+                  <div id="radio">
+                    Favorite color
+                    <input name="color" type="radio" value="red">red
+                    <input name="color" type="radio" value="green">green
+                    <input name="color" type="radio" value="blue">blue
+                    <input name="color" type="radio" value="other">Other
+                  </div>
+
+                  <br>
+
+                  <div id="datalists">
+                    <input name="country" list="countries" placeholder="Country">
+                    <datalist id="countries">
+                      <option value="Albania">
+                      <option value="Greece">
+                      <option value="Spain">
+                      <option value="Sweden">
+                    </datalist>
+
+                  </div>
+                  <br>
+                  <button>Submit</button>
+              </div>
+            </div>
+
+      <footer>
+        <a href="styling.html">Here you can read more about styling with CSS and SCSS.</a><br>
+        <a href="responsivness.html">Here you can read more about how to make a page more responsive.</a><br>
+      </footer>
+    </body>
+</html>
